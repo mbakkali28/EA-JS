@@ -9,7 +9,7 @@ fetch('https://jsonplaceholder.typicode.com/users/')
   .then(response => response.json())
   .then(users => {
     let filteredUsers = users
-        .filter(user => user.id >= 5)
+        .filter(user => user.id >= 5) // user => user.id % 2 === 0
         .map(user => {
             return {
                 id: user.id,
